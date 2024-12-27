@@ -1,11 +1,10 @@
 import mysql.connector
 import pandas as pd
-df=pd.read_csv("onlinefoods_2.csv")
+data=pd.read_csv("onlinefoods_2.csv")
 
 
 # preprocessiong the data
-df=df.head(50)
-df.dropna()
+df=data.head(50).dropna()
 df=df[['Age','Gender','Marital Status','Occupation']]   # selected only required columns from the dataframe.
 
 # Database connection
